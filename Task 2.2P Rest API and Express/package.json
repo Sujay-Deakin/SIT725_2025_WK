@@ -1,0 +1,22 @@
+{
+  "name": "Task 2.2P Rest API and Express",
+  "version": "1.0.0",
+  "description": "SIT 725 task 2.2P",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sujay-Deakin/SIT725_2025_WK.git"
+  },
+  "author": "Sujay-Deakin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Sujay-Deakin/SIT725_2025_WK/issues"
+  },
+  "homepage": "https://github.com/ChoudharyNavit22/sit725-2021-t2-prac2#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
