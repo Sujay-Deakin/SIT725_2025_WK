@@ -1,21 +1,22 @@
 {
-  "name": "sit725-2025-t1-prac",
+  "name": "task-2.2p-rest-api-and-express",
   "version": "1.0.0",
-  "description": "SIT 725 task 2.2P",
-  "main": "server.js",
-  "scripts": {
-    "start": "node server.js"
+  "description": "",
+  "homepage": "https://github.com/Sujay-Deakin/SIT725_2025_WK#readme",
+  "bugs": {
+    "url": "https://github.com/Sujay-Deakin/SIT725_2025_WK/issues"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Sujay-Deakin/SIT725_2025_WK.git"
   },
-  "author": "Sujay-Deakin",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/Sujay-Deakin/SIT725_2025_WK/issues"
+  "author": "Sujay-Deakin",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
   },
-  "homepage": "https://github.com/Sujay-Deakin/SIT725_2025_WK/tree/main/Task%202.2P%20Rest%20API%20and%20Express#readme",
   "dependencies": {
     "express": "^4.21.2"
   }

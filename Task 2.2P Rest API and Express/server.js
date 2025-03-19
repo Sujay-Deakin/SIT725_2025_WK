@@ -1,39 +1,27 @@
 var express = require("express")
+const path = require('path'); // Make sure to include this
 var app = express()
-var users = [];
+var port = process.env.port || 3003;
 
-app.use(express.static(__dirname+'/public'))
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
+// Serve static files from the "public" folder
+app.use(express.static(path.join(__dirname, 'public')));
 
-const addNumbers = (number1, number2) => {
-    var num1 = parseInt(number1)
-    var num2 = parseInt(number2)
-    var result = num1 + num2;
-    return result;
-}
-
-app.get("/addTwoNumbers",(req,res) => {
-    var number1 = req.query.number1;
-    var number2 = req.query.number2;
-    var result = addNumbers(number1,number2)
-    res.json({statusCode: 200, data: result, message:"Success"})
-})
-
-app.post("/user/create",(req,res) => {
-    let userData = {}
-    userData.name = req.body.name;
-    userData.age = req.body.age;
-    users.push(userData);
-    res.json({statusCode: 200, data: userData, message:"Created"})
-})
-
-app.get("/user",(req,res) => {
-    res.json({statusCode: 200, data: users, message:"Success"})
-})
-
-var port = process.env.port || 3000;
-
-app.listen(port,()=>{
-    console.log("App listening to: "+port)
-})
+app.get('/calc', (req, res) => {
+  const n1 = parseFloat(req.query.n1);
+  const n2 = parseFloat(req.query.n2);
+  
+  if (isNaN(n1)) {
+    return res.send("Error: Please provide a valid number");
+  }
+  
+  const sum = n1 + n2;
+  const prod = n1 * n2;
+  const diff = n1 - n2;
+  const pow1 = Math.pow(n1,n2);
+  const quo = n1 / n2;
+  res.send(`<h3> The sum of ${n1} and ${n2} is: ${sum} <h3><h3> The product of ${n1} and ${n2} is: ${prod} <h3><h3> The difference between ${n1} and ${n2} is: ${diff} <h3><h3> The quotient of ${n1} and ${n2} is: ${quo} <h3><h3> ${n1} to the power of ${n2} is: ${pow1} <h3>`);
+});
+// Start the server
+app.listen(port, () => {
+  console.log(`Server is running on http://localhost:${port}`);
+});

@@ -1,0 +1,33 @@
+{
+  "name": "task-3.2p-bootstrapping-express-app",
+  "version": "1.0.0",
+  "description": "SIT 725 task 3.2P",
+  "keywords": [
+    "Nodejs",
+    "Express",
+    "Materialize",
+    "HTML",
+    "JS",
+    "CSS"
+  ],
+  "homepage": "https://github.com/Sujay-Deakin/SIT725_2025_WK#readme",
+  "bugs": {
+    "url": "https://github.com/Sujay-Deakin/SIT725_2025_WK/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sujay-Deakin/SIT725_2025_WK.git"
+  },
+  "license": "MIT",
+  "author": "Sujay-Deakin",
+  "type": "git",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  },
+  "devDependencies": {}
+}
