@@ -10,7 +10,7 @@ app.get('/calc', (req, res) => {
   const n1 = parseFloat(req.query.n1);
   const n2 = parseFloat(req.query.n2);
   
-  if (isNaN(n1)) {
+  if (isNaN(n1)||isNaN(n2)) {
     return res.send("Error: Please provide a valid number");
   }
   
