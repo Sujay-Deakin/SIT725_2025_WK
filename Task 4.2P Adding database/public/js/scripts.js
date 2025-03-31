@@ -35,8 +35,6 @@ const addCards = (items) => {
 }
 
 
-
-
 $(document).ready(function(){
     $('.materialboxed').materialbox();
     $('#formSubmit').click(()=>{

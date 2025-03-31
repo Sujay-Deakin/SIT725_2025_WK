@@ -1,9 +1,28 @@
-const express = require("express")
-const app = express()
+const mongoose = require('mongoose');
+
+var express = require("express")
+var app = express()
 
 app.use(express.static(__dirname+'/public'))
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+
+mongoose.connect('mongodb://localhost:27017/myprojectDB', { 
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+});
+mongoose.connection.on('connected', () => {
+    console.log('Connected to MongoDB!');
+});
+
+const ProjectSchema = new mongoose.Schema({
+    title: String,
+    image: String,
+    link: String,
+    description: String,
+});
+const Project = mongoose.model('Project', ProjectSchema);
+
 
 const cardList = [
     {
@@ -20,12 +39,23 @@ const cardList = [
     }
 ]
 
-app.get('/api/projects',(req,res) => {
+// sample code to seed database
+const sampleProject = new Project({
+    title: "Shrublands",
+    image: "images/shrublands.jpg",
+    link: "About Shrublands",
+    description: "Shrubland is a plant community dominated by shrubs, often including grasses, herbs, and geophytes, and can occur naturally or result from human activity, potentially being a stable or transitional vegetation type. "
+});
+sampleProject.save().then(() => console.log("Sample project saved!"));
+// 
+
+app.get('/api/projects', async(req,res) => {
+    const projects = await Project.find({});
     res.json({statusCode: 200, data: cardList, message:"Success"})
 })
-
+    
 var port = process.env.port || 3006;
 
-app.listen(port,()=>{
+app.listen(port, ()=>{
     console.log("App running at http://localhost:"+port)
 })
