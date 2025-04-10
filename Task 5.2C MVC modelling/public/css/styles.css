@@ -1,0 +1,25 @@
+.navbar-size {
+    width: 95%;
+    margin: 0 auto;
+    color: peachpuff;
+}
+.user-image-size {
+    height: 56px;
+    margin: 4px 0;
+}
+.main-body {
+    background-color: teal;
+    color: white;
+    height: 100%;
+}
+.materialboxed-image {
+    margin: 0 auto;
+    height: 400px;
+}
+.click-me-button {
+    background-color: rgb(0, 84, 84);
+    margin-top: 50px;
+}
+.card-desc-color {
+    color: #808080;
+}
