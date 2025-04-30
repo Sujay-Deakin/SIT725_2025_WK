@@ -1,0 +1,44 @@
+.navbar-size {
+    width: 95%;
+    margin: 0 auto;
+    color: peachpuff;
+}
+.user-image-size {
+    height: 56px;
+    margin: 4px 0;
+}
+.main-body {
+    background-color: teal;
+    color: white;
+    height: 100%;
+}
+.materialboxed-image {
+    margin: 0 auto;
+    height: 400px;
+}
+.click-me-button {
+    background-color: rgb(0, 84, 84);
+    margin-top: 50px;
+}
+.live-random-color {
+    color: peachpuff;
+}
+
+.random-number-box {
+    background-color: #004d4d;
+    border: 2px solid #009f9f;
+    border-radius: 17px;
+    padding: 30px 50px;
+    color: peachpuff;
+    font-size: 56px;
+    font-weight: bold;
+    text-align: center;
+    margin: 40px auto;
+    width: fit-content;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.random-number-box:hover {
+    transform: scale(1.03);
+}

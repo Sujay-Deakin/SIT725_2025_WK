@@ -1,0 +1,32 @@
+{
+  "name": "task_4.2_adding_database",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/Sujay-Deakin/SIT725_2025_WK#readme",
+  "bugs": {
+    "url": "https://github.com/Sujay-Deakin/SIT725_2025_WK/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sujay-Deakin/SIT725_2025_WK.git"
+  },
+  "license": "MIT",
+  "author": "Sujay-Deakin",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "test": "mocha --reporter spec",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.21.2",
+    "mongoose": "^8.13.1",
+    "socket.io": "^4.8.1"
+  },
+  "devDependencies": {
+    "chai": "^5.2.0",
+    "mocha": "^11.1.0",
+    "request": "^2.88.2"
+  }
+}
